@@ -2,7 +2,7 @@ import math
 import paddle
 from paddle import nn
 import paddle.nn.functional as F
-from utils import *
+from .utils import *
 
 
 class ConvLayer(nn.Layer):

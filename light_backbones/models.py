@@ -1,7 +1,7 @@
 import paddle
 import paddle.nn as nn
-from model_config import get_configuration
-from layers import *
+from .model_config import get_configuration
+from .layers import *
 
 
 class MobileViT(nn.Layer):
@@ -472,6 +472,4 @@ if __name__ == '__main__':
     diff = np.abs(out - pt_out)
     print(diff.max(), diff.mean())
     print(np.allclose(out, pt_out))
-    # paddle.summary(model, input=inp)
-    # for k, v in model.state_dict().items():
-    #     print(k, v.shape)
+
